@@ -11,8 +11,8 @@ export class FormFieldOverviewExample implements OnInit {
   yesAnswer: string = 'Yes';
   noAnswer: string = 'No';
 
-  yesVotes: number = 0;
-  noVotes: number = 0;
+  yesVotes: number = 10;
+  noVotes: number = 58;
   hasVoted: boolean = false;
 
   constructor() { }

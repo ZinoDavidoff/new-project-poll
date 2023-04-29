@@ -47,9 +47,9 @@ body {
 .progress {
   height: 100%;
   background-color: #007bff;
-  transition: width 0.5s ease;
+  width: var(--percentage);
+  transition: width 0.5s ease, background-color 0.5s ease;
 }
-
 
 button {
   padding: 10px;
