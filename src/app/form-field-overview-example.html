@@ -1,0 +1,24 @@
+<div class="poll-container">
+<h2>{{ question }}</h2>
+<div class="answer-container">
+  <button *ngIf="!hasVoted" (click)="vote('yes')">{{ yesAnswer }}</button>
+  <button *ngIf="!hasVoted" (click)="vote('no')">{{ noAnswer }}</button>
+  <div *ngIf="hasVoted" class="result-container">
+    <div class="yes-result">
+      <div class="result-text">{{ yesVotes }} ({{ yesPercentage }}%)</div>
+      <div class="progress-bar">
+        <div class="progress" [style.width.%]="yesPercentage"></div>
+      </div>
+    </div>
+    <div class="no-result">
+      <div class="result-text">{{ noVotes }} ({{ noPercentage }}%)</div>
+      <div class="progress-bar">
+        <div class="progress" [style.width.%]="noPercentage"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div *ngIf="hasVoted" class="reset-container">
+  <button (click)="reset()">Reset</button>
+</div>
+</div>
